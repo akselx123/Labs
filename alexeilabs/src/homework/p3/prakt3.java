@@ -11,7 +11,7 @@ public class prakt3 extends HttpServlet {
 		resp.setContentType("text/plain; charset=utf-8");
 		
 			
-		if(req.getParameter("n_txt")!=null && req.getParameter("m_txt")!=null){
+		if(req.getParameter("n_txt")!= null && req.getParameter("m_txt")!= null){
 			
 		float n = Float.parseFloat(req.getParameter("n_txt")),
 				m = Float.parseFloat(req.getParameter("m_txt")), r1, r2;
