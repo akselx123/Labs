@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Exceptions</title>
+    
+    <script src="jquery-2.1.0.min.js"></script>
+ 	<script>  
+ 		$( function() {
+ 			
+ 			$('#submit_btn').click( function() {
+ 				var f_txt = $('#f_txt').val();
+ 				var i_txt = $('#i_txt').val();
+ 				var email_txt = $('#email_txt').val();
+ 				var login_txt = $('#login_txt').val();
+ 				var pass_txt = $('#pass_txt').val();
+ 				var num_txt = $('#num_txt').val();
+ 				$('#span_result').load("/test?f_txt="+f_txt+"&i_txt="+i_txt+"&email_txt="+email_txt+"&login_txt="+login_txt+"&pass_txt="+pass_txt+"&num_txt="+num_txt); 
+ 			});
+ 			
+ 		});
+ 	</script>
+    
+  </head>
+
+  <body>
+    <h1>Практическое задание 5. Проверка формы с помощью исключений</h1>
+    
+  
+    	Фамилия<input id="f_txt"type="text"/><br>
+    	Имя<input id="i_txt"type="text"/><br><br>
+    	email<input id="email_txt"type="text"/><br><br>
+    	Login<input id="login_txt"type="text"/><br><br>
+    	Password<input id="pass_txt"type="password"/><br><br>
+    	Число<input id="num_txt"type="text"/><br><br>
+    	
+    	    	
+    	
+    	<button id="submit_btn">Submit</button><br>
+    	 	
+    	
+    	<span id="span_result"></span><br>
+   
+    
+    
+  </body>
+</html>
