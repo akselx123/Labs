@@ -15,7 +15,7 @@ public class prakt2 extends HttpServlet {
 		
 		if (var1 == null && var2 == null)
 		{
-			resp.getWriter().println("Hello, world");
+			resp.getWriter().println("<div class='alert alert-success' role='alert'>Hello, world</div>");
 		}
 		else if (var1 != null && var2 != null) {
 		
@@ -33,7 +33,7 @@ public class prakt2 extends HttpServlet {
 			} else {
 				result = i1 / i2;
 			}
-			resp.getWriter().println(result);
+			resp.getWriter().println("<div class='alert alert-success' role='alert'>"+result+"</div>");
 		}
 	}
 }

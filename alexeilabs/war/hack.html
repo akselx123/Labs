@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>WEB-Homeworks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="site/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="site/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+   <style>
+#id1 {
+	background: url(logo2.png) no-repeat;
+	width: 800px;
+	height: 80px;
+}
+#canvas {
+	
+	width: 800px;
+	padding: 20px
+}
+#map-canvas {
+	border: 3px black solid;
+	height: 450px;
+	width: auto;
+	vertical-align: bottom;
+}
+</style>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	// This example displays a marker at the center of Australia.
+	// When the user clicks the marker, an info window opens.
+
+	//style with http://snazzymaps.com/
+	var mystyle = [{"elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"road","elementType":"labels.icon"},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"water","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"poi.park","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]}]
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(59.4762925,31.9787313);
+		var berlin = new google.maps.LatLng(59.4762925,31.9787313);
+		var stpete = new google.maps.LatLng(60.0047626,30.2672505);
+		var nyc = new google.maps.LatLng(57.8005982,28.2782951);
+		var london = new google.maps.LatLng(51.5286416, -0.1015987);
+
+		var mapOptions = {
+			zoom : 8,
+			center : myLatlng,
+			styles: mystyle
+
+		};
+
+		map = new google.maps.Map(document.getElementById('map-canvas'),
+				mapOptions);
+
+		var sberlin = '<h1>Кириши</h1><p>Тут есть НПЗ</p>';
+		var slondon = '<h1>Лондон</h1><p>Просто Лондон</p>';
+		var sstpete = '<h1>Санкт-Петербург</h1><p>Приморский район, не далеко от м. Комендантский проспект</p>';
+		var snyc = '<h1>Псков</h1><p>Город псков</p>';
+
+		var infowindowberlin = new google.maps.InfoWindow({
+			content : sberlin,
+			maxWidth: 300
+		});
+
+		var infowindowstpete = new google.maps.InfoWindow({
+			content : sstpete,
+			maxWidth: 300
+		});
+
+		var infowindownyc = new google.maps.InfoWindow({
+			content : snyc,
+			maxWidth: 200
+		});
+
+		var infowindowlondon = new google.maps.InfoWindow({
+			content : slondon,
+			maxWidth: 400
+		});
+
+		var markerberlin = new google.maps.Marker({
+			position : berlin,
+			map : map,
+			title : 'Кириши',
+			icon: 'pin.png'
+		});
+
+		var markerstpete = new google.maps.Marker({
+			position : stpete,
+			map : map,
+			title : 'Петербург',
+			icon: 'pin.png'
+		});
+
+		var markernyc = new google.maps.Marker({
+			position : nyc,
+			map : map,
+			title : 'Псков',
+			icon: 'pin.png'
+		});
+
+		var markerlondon = new google.maps.Marker({
+			position : london,
+			map : map,
+			title : 'Лондон',
+			icon: 'pin.png'
+		});
+
+		
+		google.maps.event.addListener(markerberlin, 'click', function() {
+			infowindowberlin.open(map, markerberlin);
+			infowindowstpete.close();
+			infowindownyc.close();
+			infowindowlondon.close();
+		});
+
+		google.maps.event.addListener(markerstpete, 'click', function() {
+			infowindowstpete.open(map, markerstpete);
+			infowindowberlin.close();
+			infowindownyc.close();
+			infowindowlondon.close();
+		});
+
+		google.maps.event.addListener(markernyc, 'click', function() {
+			infowindownyc.open(map, markernyc);
+			infowindowstpete.close();
+			infowindowberlin.close();
+			infowindowlondon.close();
+		});
+
+		google.maps.event.addListener(markerlondon, 'click', function() {
+			infowindowlondon.open(map, markerlondon);
+			infowindowstpete.close();
+			infowindownyc.close();
+			infowindowberlin.close();
+		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>	
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">WEB-Homeworks Project</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+           <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
+            <li class="active"><a href="hack.html">Google Map</a></li>
+            <li><a href="site/indexw.html">Site</a></li>
+            <li><a href="indexpr2.html">Pr. 2</a></li>
+            <li><a href="indexpr3.html">Pr. 3</a></li>
+            <li><a href="indexpr5excep.html">Exceprion(pr.5)</a></li>
+            <li><a href="indexpr6csv.html">Read CSV(pr.6)</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Google карта</h1>
+
+          <div class="row placeholders">
+            <div id="id1"></div><div id="canvas"><div id="map-canvas"></div></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="site/js/jquery.min.js"><\/script>')</script>
+    <script src="site/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="site/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="site/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

@@ -39,28 +39,23 @@
     <script src="jquery-2.1.0.min.js"></script>
  	<script>  
  		$( function() {
- 			$('#nm_button').click( function() {
- 				var n_txt = $('#n_txt').val();
- 				var m_txt = $('#m_txt').val();
- 				$('#nm_result').load("/prakt3?n_txt="+n_txt+"&m_txt="+m_txt); 
+ 			
+ 			$('#submit_btn').click( function() {
+ 				//var f_txt = $('#f_txt').val();
+ 				var sel_spis = $('#sel_spis').val();
+ 				//var hid = $('#hid').val();
+ 				$('#span_result').load("/prakt6csv?sel_spis="+sel_spis); 
+ 			});
+ 			$('#vivodAll_btn').click( function() {
+ 				var sel_vivodAll = $('#sel_vivodAll').val();
+ 				$('#span_result').load("/prakt6csv?sel_vivodAll="+sel_vivodAll); 
+ 			});
+ 			$('#vivodFind_btn').click( function() {
+ 				var sel_vivodFind = $('#sel_vivodFind').val();
+ 				var option_txt = ($('#option_txt').val()).replace(/\s+/g, '');//Строка без пробелов
+ 				$('#span_result').load("/prakt6csv?sel_vivodFind="+sel_vivodFind+"&option_txt="+option_txt); 
  			});
  			
- 			$('#abc_button').click( function() {
- 				var a_txt = $('#a_txt').val();
- 				var b_txt = $('#b_txt').val();
- 				var c_txt = $('#c_txt').val();
- 				$('#abc_result').load("/prakt3?a_txt="+a_txt+"&b_txt="+b_txt+"&c_txt="+c_txt); 
- 			});
- 			
- 			$('#mass_button').click( function() {
- 				var mass_hid = $('#mass_hid').val();
- 				$('#mass_result').load("/prakt3?mass_hid="+mass_hid); 
- 			});
- 			
- 			$('#mass1_button').click( function() {
- 				var mass1_hid = $('#mass1_hid').val();
- 				$('#mass1_result').load("/prakt3?mass1_hid="+mass1_hid); 
- 			});
  		});
  	</script>
     
@@ -91,36 +86,29 @@
             <li><a href="hack.html">Google Map</a></li>
             <li><a href="site/indexw.html">Site</a></li>
             <li><a href="indexpr2.html">Pr. 2</a></li>
-            <li class="active"><a href="indexpr3.html">Pr. 3</a></li>
+            <li><a href="indexpr3.html">Pr. 3</a></li>
             <li><a href="indexpr5excep.html">Exceprion(pr.5)</a></li>
-            <li><a href="indexpr6csv.html">Read CSV(pr.6)</a></li>
+            <li class="active"><a href="indexpr6csv.html">Read CSV(pr.6)</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Практическое задание 3</h1>
-			<input id="n_txt"type="text"/>
-    	<input id="m_txt"type="text"/>
-    	<button id="nm_button">Ближе к 10</button><br>
-    	<span id="nm_result"></span>
-    	<br><br><br>
-    	
-    	<input id="a_txt"type="text"/>
-    	<input id="b_txt"type="text"/>
-    	<input id="c_txt"type="text"/>
-    	<button id="abc_button">Корни квадратного уравнения</button><br>
-    	<span id="abc_result"></span>
-    	<br><br><br>
-    	
-    	<input id="mass_hid"type="hidden"/>
-    	<button id="mass_button">Массив 8*5 случайный</button><br>
-    	<span id="mass_result"></span>
-    	<br><br><br>
-    	
-    	<input id="mass1_hid"type="hidden"/>
-    	<button id="mass1_button">Массив 5*8 случайный c поиском max</button><br>
-    	<span id="mass1_result"></span>
-    	<br>
-         
+          <h1 class="page-header">Практическое задание 6</h1>
+
+          1) Вывести все:<br><select id="sel_vivodAll">
+    		<option value="allMar">1) Вывести список маршрутов общественного транспорта</option>
+    		<option value="allAutoGrz">2) Вывести весь список ГРЗ маршрутных ТС</option>
+    		<option value="allPerevoz">2) Вывести весь список перевозчиков</option>
+    	</select>
+    	<button id="vivodAll_btn">Вывести</button><br>
+    	2) Вывести по введенным данным:<br><select id="sel_vivodFind">
+    		<option value="findPoGRZ">1) Найти маршрут по ГРЗ ТС</option>
+    		<option value="findPoNoBus">2) Найти маршрут и марки автобусов (если есть) по введенному номеру транспорта</option>
+    		<option value="findPoTrComp">3) Найти маршрут и марки автобусов по введенному перевозчику</option>
+    	</select>
+    	; Введите опцию(маршрут или ГРЗ или перевозчик):<input id="option_txt" type="text"/>
+    	<button id="vivodFind_btn">Вывести</button><br>
+    	    	
+    	<span id="span_result"></span><br>
 
         </div>
       </div>

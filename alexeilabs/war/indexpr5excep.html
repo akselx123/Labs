@@ -9,7 +9,32 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Exceptions</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>WEB-Homeworks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="site/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="site/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
     
     <script src="jquery-2.1.0.min.js"></script>
  	<script>  
@@ -31,15 +56,43 @@
   </head>
 
   <body>
-    <h1>Практическое задание 5. Проверка формы с помощью исключений</h1>
-    
-  
-    	Фамилия<input id="f_txt"type="text"/><br>
-    	Имя<input id="i_txt"type="text"/><br><br>
-    	email<input id="email_txt"type="text"/><br><br>
-    	Login<input id="login_txt"type="text"/><br><br>
-    	Password<input id="pass_txt"type="password"/><br><br>
-    	Число<input id="num_txt"type="text"/><br><br>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">WEB-Homeworks Project</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+           <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
+            <li><a href="hack.html">Google Map</a></li>
+            <li><a href="site/indexw.html">Site</a></li>
+            <li><a href="indexpr2.html">Pr. 2</a></li>
+            <li><a href="indexpr3.html">Pr. 3</a></li>
+            <li class="active"><a href="indexpr5excep.html">Exceprion(pr.5)</a></li>
+            <li><a href="indexpr6csv.html">Read CSV(pr.6)</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Практическое задание 5. Исключения</h1>
+			<input id="f_txt"type="text" placeholder="Фамилия"/><br><br>
+    		<input id="i_txt"type="text" placeholder="Имя"/><br><br>
+    		<input id="email_txt"type="text" placeholder="Е-меил"/><br><br>
+    		<input id="login_txt"type="text" placeholder="Логин"/><br><br>
+    		<input id="pass_txt"type="password" placeholder="Пароль"/><br><br>
+    		<input id="num_txt"type="text" placeholder="Число"/><br><br>
     	
     	    	
     	
@@ -47,8 +100,21 @@
     	 	
     	
     	<span id="span_result"></span><br>
-   
-    
-    
+         
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="site/js/jquery.min.js"><\/script>')</script>
+    <script src="site/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="site/js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="site/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

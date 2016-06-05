@@ -9,25 +9,241 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Homeworks</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link rel="icon" href="favicon.ico">
+
+    <title>WEB-Homeworks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="site/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="site/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-    <h1>Homeworks!</h1>
-	
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">All homework:</td>        
-      </tr>
-      <tr>
-        <td><a href="indexpr2.html">Практическое задание 2</a></td>
-       </tr>
-       <tr>
-        <td><a href="indexpr3.html">Практическое задание 3</a></td>
-      </tr>
-       <tr>
-        <td><a href="site/indexw.html">Сайт</a></td>
-      </tr>
-    </table>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <<a class="navbar-brand" href="/">WEB-Homeworks Project</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+           <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>-->
+            <li><a href="hack.html">Google Map</a></li>
+            <li><a href="site/indexw.html">Site</a></li>
+            <li><a href="indexpr2.html">Pr. 2</a></li>
+            <li><a href="indexpr3.html">Pr. 3</a></li>
+            <li><a href="indexpr5excep.html">Exceprion(pr.5)</a></li>
+            <li><a href="indexpr6csv.html">Read CSV(pr.6)</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Главная</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="logo3.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Мелешко Алексей Викторович</h4>
+              <span class="text-muted">Срудент группы Р3355</span>
+              <span class="text-muted"><br>Мегафакультет ФКТиУ ПБКС</span>
+            </div>
+            <p></p>
+            <p style="font-size: 18pt">
+            	Данный проект посвящен выполнению практических работ по дисциплине WEB-Технологии.
+            	Тут можно увидеть все практические работы, которые предусматривают вывод результата на html страницу.
+            	
+            </p>
+            <p style="font-size: 18pt">
+            	Контакты автора:<br>
+            	E-Mail - lexa.0710@gmail.com<br>
+            	Ссылка на репозиторий с проектом и всеми (всключая консольные) задания: <a href="https://github.com/akselx123/Labs">
+            	<button type="button" class="btn btn-lg btn-info">Репозиторий GitHub</button></a>
+            </p>
+            
+          </div>
+
+          <h2 class="sub-header">Описание всех заданий</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th width="30%">Название</th>
+                  <th width="70%">Описание</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Google Map</td>
+                  <td>
+                  <p>
+                  	Создание Google карты с несколькими отметками и оформлением
+                  </p>
+                  <a href="hack.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a>
+                  </td>
+                </tr>
+                 <tr>
+                  <td>Site</td>
+                  <td>
+                  <p>
+                  	Создать сайт на выбранную тему.<br>
+            		Тема сайта: Автомодельный спорт. Содержит немного истории о автомодельном спорте, 
+            		виды соревнований, классификация моделей для автомодельного спорта, а так же 
+            		характеристики некоторых из них.
+                  </p>
+                  <a href="site/indexw.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 1</td>
+                  <td>
+                  <p>
+                  	Основы синтаксиса Java, создание Java проекта и вывод информации на консоль.<br>
+                  	Задание с выводом на консоль, поэтому просмотр недоступен =(
+                  </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 2</td>
+                  <td><p>
+                  	Создание Java Web проекта, операции, переменные, циклы, вывод информации на веб-страницу.<br>
+                  	Вывод фразы "Hello world", сложение двух чисел.
+                  </p>
+                  <a href="indexpr2.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a></td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 3</td>
+                  <td><p>
+                  	Массивы, циклы, типы данных.<br>
+                  	Поиск числа ближнего к 10, решение квадратного уравнения, вывод массивов случайных чисел.
+                  </p>
+                  <a href="indexpr3.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a></td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 4</td>
+                  <td>
+                  	<p>
+                  		Консольное задание на передачу аргументов в главную функцию. <br>
+                  		Commands: <br>
+
+						-d: This is a simple program.<br>
+						-hello: What is your name? <br>
+						-web: Our website is http://site.ru<br>
+						-?: All commands<br>
+						-m: Show spisok of model (command: -m [#modeli])<br>
+						-r: Raschitat class or engime (command: -r obem) Raschitat time of work (command: -r emkost_akb tok_potreb)<br>
+						Задание консольное и просмотра нет =(
+                  	</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 5</td>
+                  <td>
+                  	<p>
+                  		Задание на взаимодействие классов. Необходимо было придумать ряд классов со своими методами и переменными
+                  		и организовать взаимодействие между ними.
+                  	</p>
+                  	<p>
+                  		Разработанные классы:<br>
+                  		<ul>
+                  			<li>Класс Освещение {переменные: bool on, sensor sen; методы: включить если сработал датчик, выключить, получить состояние}</li>
+                  			<li>Класс Датчик {переменные: bool on; методы: включить, выключить, получить состояние}</li>
+                  			<li>Класс Термометр {переменные: double temp; методы: поднять температуру, понизить температуру, получить состояние}</li>
+                  			<li>Класс Отопление {переменные: bool on; методы: включить используя температуру термометра, выключить, получить состояние}</li>
+                  			<li>Класс Кондиционер {переменные: bool on; методы: включить используя температуру термометра и если не включено отопление, выключить, получить состояние}</li>
+                  			<li>Класс Сирена {переменные: bool on, String logs; методы: включить если постовлена сигнализация и сработал датчик, выключить, получить состояние, получить историю срабатывания, отчистить иторию}</li>
+                  			<li>Класс Сигранизация {переменные: bool on, String pass; методы: включить используя введенный пароль, выключить используя введенный пароль, получить стстояние}</li>
+                  		</ul><br>
+                  		Описание взаимодействия: Если срабатывает датяик движения включается свет, если выставленная температура ниже чем показывает термометр, то
+                  		включается кондиционер, если заданная температура выше чам по термометру, то включается отопление. Сигнализация включится если введен перный пароль.
+                  		После включения сигнализации отключаютсч все приборы. Сирена сработает если включена сигнализация и сработал датчик.<br>
+                  		Задание консольное и просмотра нет =(
+                  	</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 5. Исключения</td>
+                  <td><p>
+                  	Работа с исключениями. 
+                  	Есть несколько полей для ввода. В одно можно вводить только числа, в другое только e-mail, в третье нельзя вводить ковычки и т.д. <br>
+                  	Все это сделано с помощью механизма исключений. То есть когда возникает неверная ситуация (ex: введено не число), то создается пользовательское исключение и авдается сообщение о ошибке.
+                  </p>
+                  <a href="indexpr5excep.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a></td>
+                </tr>
+                <tr>
+                  <td>Практическое задание 6</td>
+                  <td><p>
+                  	Работа с CSV файлами. С сайта открытых данных были скачаны два файла в csv формате. Один файл содержит маршруты движения городского транспорта.
+                  	Второй файл содержит Государственные регистрационные знаки маршрутных транспортных средств, движение которых разрешено по выделенной полосе.
+                  	<br>Обработка данных:<br>
+                  	<ul>
+                  		<li>Вывести все маршруты городского транспорта</li>
+                  		<li>Вывести все данные о ГРЗ и марках авто</li>
+                  		<li>Вывести наименования имеющихся перевозчиков</li>
+                 		<li>Вывести маршрут по введенному ГРЗ авто (выводит конечные точки маршрута из файла 1)</li>
+                 		<li>Вывести маршрут и марки автобусов по введенному номеру автобуса (Выводит маршрут из файла 1 и все найденные марки авто из файла 2)</li>
+                  		<li>Вывести маршрут и марки автобусов по введенному перевозчику (выводит все авто, принадлежащие перевозчику из файла 2 и маршруты номеров транспорта, принадлежащих перевозчику из файла 1)</li>
+                  	</ul><br>
+                  </p>
+                  <a href="indexpr6csv.html">
+                  	<button type="button" class="btn btn-sm btn-success" style="width:80px">View</button>
+                  </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="site/js/jquery.min.js"><\/script>')</script>
+    <script src="site/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="site/js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="site/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=C\:/Users/\u0410\u043B\u0435\u043A\u0441\u0435\u0439/git/Labs/alexeilabs/war/WEB-INF/lib/opencsv-3.7.jar
 warSrcDir=war
 warSrcDirIsOutput=true

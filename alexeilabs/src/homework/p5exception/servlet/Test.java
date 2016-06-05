@@ -25,16 +25,16 @@ public class Test extends HttpServlet {
 			parse(f_txt, i_txt, email_txt, login_txt, pass_txt, num_txt);
 		}
 		catch(TextExcep e){
-			resp.getWriter().println(e.getMessage());
+			resp.getWriter().println("<div class='alert alert-danger' role='alert'>"+e.getMessage()+"</div>");
 		}
 		catch(NumberExcep e){
-			resp.getWriter().println(e.getMessage());
+			resp.getWriter().println("<div class='alert alert-danger' role='alert'>"+e.getMessage()+"</div>");
 		}
 		catch(PassExcep e){
-			resp.getWriter().println(e.getMessage());
+			resp.getWriter().println("<div class='alert alert-danger' role='alert'>"+e.getMessage()+"</div>");
 		}
 		catch(EmailExcep e){
-			resp.getWriter().println(e.getMessage());
+			resp.getWriter().println("<div class='alert alert-danger' role='alert'>"+e.getMessage()+"</div>");
 		}
 		
 		
